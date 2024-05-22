@@ -5,7 +5,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}):super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
@@ -22,29 +22,38 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}):super(key: key);
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text('Journey To Flutter'),
+        title: Text(
+          'Journey To Flutter',
+          style: TextStyle(color: Colors.white),
+        ),
       ),
       body: Center(
         child: Container(
-          width: 100,
-          height: 100,
-          color: Colors.yellow,
-          child: Text('Hello Container'),
+          width: 250,
+          height: 150,
+          color: Colors.red,
+          child: Center(
+            child: Text(
+              'This is center of container',
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.white,
+              ),
+            ),
+          ),
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
