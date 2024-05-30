@@ -40,25 +40,50 @@ class _MyHomePageState extends State<MyHomePage> {
           style: TextStyle(color: Colors.white),
         ),
       ),
-      body: Center(
-        child: Container(
-          width: 250,
-          height: 150,
-          color: Colors.yellow,
-          child: Center(
-            child: Text(
-              'Welcome to Flutter Journey',
-              style: TextStyle(
-                fontSize: 18,
-                color: Colors.blueAccent,
-                fontWeight: FontWeight.bold,
-                backgroundColor: Colors.red,
+      body: Column(
+        children: [
+          Center(
+            child: Container(
+              width: 250,
+              height: 150,
+              color: Colors.yellow,
+              child: Center(
+                child: Text(
+                  'Welcome to Flutter Journey',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.blueAccent,
+                    fontWeight: FontWeight.bold,
+                    backgroundColor: Colors.red,
+                  ),
+                ),
               ),
             ),
           ),
-        ),
+          TextButton(
+            onPressed: () {
+              print('Text Button Tapped');
+            },
+            child: Text('Text Button'),
+            onLongPress: () {
+              print('Long Press');
+            },
+          ),
+          ElevatedButton(
+            onPressed: () {
+              print('Elevated Button Tapped');
+            },
+            child: Text('Elevated Button'),
+          ),
+          OutlinedButton(
+            onPressed: () {
+              print('Outlined Button Tapped');
+            },
+            child: Text('Outlined Button'),
+          ),
+        ],
       ),
-     // This trailing comma makes auto-formatting nicer for build methods.
+      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
