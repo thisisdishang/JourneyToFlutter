@@ -81,6 +81,14 @@ class _MyHomePageState extends State<MyHomePage> {
             },
             child: Text('Outlined Button'),
           ),
+          SizedBox(
+            height: 10,
+          ),
+          Container(
+            width: 300,
+            height: 300,
+            child: Image.asset('assets/images/image2.jpg'),
+          ),
         ],
       ),
       // This trailing comma makes auto-formatting nicer for build methods.
