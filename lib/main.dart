@@ -41,17 +41,54 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                width: 150,
+                height: 150,
+                color: Colors.purpleAccent,
+                child: Center(
+                  child: Text(
+                    'Row 1',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                width: 150,
+                height: 150,
+                color: Colors.pink,
+                child: Center(
+                  child: Text(
+                    'Row 2',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.amber,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
           Center(
             child: Container(
-              width: 250,
-              height: 150,
+              width: 300,
+              height: 100,
               color: Colors.yellow,
               child: Center(
                 child: Text(
-                  'Welcome to Flutter Journey',
+                  'Learn Row and Column Widget',
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 16,
                     color: Colors.blueAccent,
                     fontWeight: FontWeight.bold,
                     backgroundColor: Colors.red,
@@ -60,29 +97,31 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           ),
-          TextButton(
-            onPressed: () {
-              print('Text Button Tapped');
-            },
-            child: Text('Text Button'),
-            onLongPress: () {
-              print('Long Press');
-            },
-          ),
-          ElevatedButton(
-            onPressed: () {
-              print('Elevated Button Tapped');
-            },
-            child: Text('Elevated Button'),
-          ),
-          OutlinedButton(
-            onPressed: () {
-              print('Outlined Button Tapped');
-            },
-            child: Text('Outlined Button'),
-          ),
-          SizedBox(
-            height: 10,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              TextButton(
+                onPressed: () {
+                  print('Text Button Tapped');
+                },
+                child: Text('Text Button'),
+                onLongPress: () {
+                  print('Long Press');
+                },
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  print('Elevated Button Tapped');
+                },
+                child: Text('Elevated Button'),
+              ),
+              OutlinedButton(
+                onPressed: () {
+                  print('Outlined Button Tapped');
+                },
+                child: Text('Outlined Button'),
+              ),
+            ],
           ),
           Container(
             width: 300,
