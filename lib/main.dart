@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Center(
           child: Text(
             'Journey To Flutter',
-            style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500),
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
           ),
         ),
       ),
@@ -70,19 +71,27 @@ class _MyHomePageState extends State<MyHomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     InkWell(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(20),
+                      ),
+                      splashColor: Colors.blue,
                       onTap: () {
-                        print('Tapped on Container 1');
+                        Fluttertoast.showToast(msg: 'Tapped on Container 1');
                       },
                       onLongPress: () {
-                        print('Long Pressed on Container 1');
+                        Fluttertoast.showToast(
+                            msg: 'Long Pressed on Container 1');
                       },
                       onDoubleTap: () {
-                        print('Double-Tapped on Container 1');
+                        Fluttertoast.showToast(
+                            msg: 'Double-Tapped on Container 1');
                       },
                       child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.purpleAccent,
+                            borderRadius: BorderRadius.circular(75)),
                         width: 150,
                         height: 150,
-                        color: Colors.purpleAccent,
                         child: Center(
                           child: InkWell(
                             onTap: () {
@@ -114,9 +123,13 @@ class _MyHomePageState extends State<MyHomePage> {
                         print('Double-Tapped on Container 2');
                       },
                       child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.pink,
+                            borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(25),
+                                bottomRight: Radius.circular(25))),
                         width: 150,
                         height: 150,
-                        color: Colors.pink,
                         child: Center(
                           child: InkWell(
                             onTap: () {
@@ -138,9 +151,15 @@ class _MyHomePageState extends State<MyHomePage> {
                       width: 10,
                     ),
                     Container(
+                      decoration: BoxDecoration(
+                        color: Colors.green,
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.elliptical(25, 30),
+                          bottomLeft: Radius.elliptical(30, 25),
+                        ),
+                      ),
                       width: 150,
                       height: 150,
-                      color: Colors.green,
                       child: Center(
                         child: InkWell(
                           onTap: () {
@@ -161,9 +180,17 @@ class _MyHomePageState extends State<MyHomePage> {
                       width: 10,
                     ),
                     Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(25),
+                          ),
+                          color: Colors.blue,
+                          border: Border.all(
+                            width: 7,
+                            color: Colors.red,
+                          )),
                       width: 150,
                       height: 150,
-                      color: Colors.blue,
                       child: Center(
                         child: InkWell(
                           onTap: () {
@@ -184,9 +211,18 @@ class _MyHomePageState extends State<MyHomePage> {
                       width: 10,
                     ),
                     Container(
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          boxShadow: [
+                            BoxShadow(
+                              blurRadius: 15,
+                              spreadRadius: 8,
+                              color: Colors.deepPurpleAccent,
+                            ),
+                          ],
+                          shape: BoxShape.circle),
                       width: 150,
                       height: 150,
-                      color: Colors.black,
                       child: Center(
                         child: InkWell(
                           onTap: () {
