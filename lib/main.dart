@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:journey_to_flutter/ExpandedExample.dart';
+import 'package:journey_to_flutter/ListView.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Jouney To Flutter',
       home: const MyHomePage(),
     );
   }
@@ -32,8 +34,6 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.orange,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
         title: Center(
           child: Text(
             'Journey To Flutter',
@@ -47,17 +47,21 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Center(
               child: Container(
+                margin: EdgeInsets.all(20),
                 width: 400,
                 height: 100,
                 color: Colors.yellow,
                 child: Center(
-                  child: Text(
-                    '...Keep Coding...',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      backgroundColor: Colors.deepPurpleAccent,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top:25),
+                    child: Text(
+                      '...Keep Coding...',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        backgroundColor: Colors.deepPurpleAccent,
+                      ),
                     ),
                   ),
                 ),
@@ -244,7 +248,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(10),
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -296,6 +300,43 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return myexpanded();
+                            },
+                          ),
+                        );
+                      },
+                      child: Text('Expanded With Row'),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return myexpanded2();
+                            },
+                          ),
+                        );
+                      },
+                      child: Text('Expanded With Column'),
+                    ),
+                  ],
+                ),
+              ),
+            ),
             Container(
               width: 300,
               height: 300,
@@ -309,207 +350,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      // This trailing comma makes auto-formatting nicer for build methods.
-    );
-  }
-}
-
-class mylist extends StatefulWidget {
-  const mylist({super.key});
-
-  @override
-  State<mylist> createState() => _mylistState();
-}
-
-class _mylistState extends State<mylist> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.red,
-        title: Text(
-          'ListView Example',
-          style: TextStyle(color: Colors.white),
-        ),
-      ),
-      body: ListView(
-        scrollDirection: Axis.horizontal,
-        reverse: true,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              'One',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              'Two',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              'Three',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              'Four',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              'Five',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              'Six',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              'Seven',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              'Eight',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              'Nine',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              'Ten',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class mylistbuilder extends StatefulWidget {
-  const mylistbuilder({super.key});
-
-  @override
-  State<mylistbuilder> createState() => _mylistbuilderState();
-}
-
-class _mylistbuilderState extends State<mylistbuilder> {
-  @override
-  Widget build(BuildContext context) {
-    var arrNames = [
-      'Alpha',
-      'Beta',
-      'Gamma',
-      'Delta',
-      'Hella',
-      'Alic',
-      'John',
-      'Brier',
-      'Devin'
-    ];
-
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text(
-          'ListView Builder Example',
-          style: TextStyle(color: Colors.white),
-        ),
-      ),
-      body: ListView.builder(
-        itemBuilder: (context, index) => Center(
-          child: Text(
-            arrNames[index],
-            style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
-          ),
-        ),
-        itemCount: arrNames.length,
-        itemExtent: 100,
-      ),
-    );
-  }
-}
-
-class mylistseparated extends StatefulWidget {
-  const mylistseparated({super.key});
-
-  @override
-  State<mylistseparated> createState() => _mylistseparatedState();
-}
-
-class _mylistseparatedState extends State<mylistseparated> {
-  @override
-  Widget build(BuildContext context) {
-    var arrNames = [
-      'Gujarat',
-      'Maharashtra',
-      'Delhi',
-      'Rajasthan',
-      'Madhya Pradesh',
-      'Uttar Pradesh',
-      'Telangana',
-      'Jammu & Kashmir',
-      'Bihar',
-      'Karnatak',
-      'Punjab',
-      'Sikkim'
-    ];
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text(
-          'ListView Separated Example',
-          style: TextStyle(color: Colors.white),
-        ),
-      ),
-      body: ListView.separated(
-          itemBuilder: (context, index) {
-            return Row(
-              children: [
-                Text(
-                  index.toString(),
-                  style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  width: 15,
-                ),
-                Text(
-                  arrNames[index],
-                  style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
-                ),
-              ],
-            );
-          },
-          separatorBuilder: (context, index) {
-            return Divider(height: 50, thickness: 5);
-          },
-          itemCount: arrNames.length),
     );
   }
 }
