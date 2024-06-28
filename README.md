@@ -1,3 +1,5 @@
 # JourneyToFlutter
 
-A new flutter project for learning for beginning to advance.
+A Flutter project for learning Flutter from beginning to advance.
+
+### Topic Cover:
