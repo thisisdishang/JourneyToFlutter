@@ -199,3 +199,68 @@ class _mylistseparatedState extends State<mylistseparated> {
     );
   }
 }
+
+class mylisttile extends StatelessWidget {
+  const mylisttile({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    var arrNames = [
+      'Gujarat',
+      'Maharashtra',
+      'Kerala',
+      'Rajasthan',
+      'Madhya Pradesh',
+      'Uttar Pradesh',
+      'Telangana',
+      'Jammu & Kashmir',
+      'Bihar',
+      'Karnatak',
+      'Punjab',
+      'Delhi'
+    ];
+
+    var subNames = [
+      'Surat',
+      'Mumbai',
+      'Kochi',
+      'Udaipur',
+      'Ujjain',
+      'Mathura',
+      'Telangana',
+      'Srinagar',
+      'Patna',
+      'Bangalore',
+      'Amritsar',
+      'Delhi'
+    ];
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.teal,
+        title: Text(
+          'ListTile Example',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+      body: ListView.separated(
+          itemBuilder: (context, index) => ListTile(
+                leading: Text(
+                  '${index + 1}',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                title: Text(
+                  subNames[index],
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                ),
+                subtitle: Text(arrNames[index]),
+                trailing: Icon(Icons.add),
+              ),
+          separatorBuilder: (context, index) => Divider(
+                height: 25,
+                thickness: 5,
+                color: Colors.green,
+              ),
+          itemCount: arrNames.length),
+    );
+  }
+}
