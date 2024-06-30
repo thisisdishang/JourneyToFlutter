@@ -244,9 +244,13 @@ class mylisttile extends StatelessWidget {
       ),
       body: ListView.separated(
           itemBuilder: (context, index) => ListTile(
-                leading: Text(
-                  '${index + 1}',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                leading: Container(
+                  width: 60,
+                  height: 60,
+                  child: CircleAvatar(
+                    backgroundImage: NetworkImage(
+                        'https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=338&ext=jpg&ga=GA1.1.2113030492.1719532800&semt=ais_user'),
+                  ),
                 ),
                 title: Text(
                   subNames[index],
@@ -256,7 +260,7 @@ class mylisttile extends StatelessWidget {
                 trailing: Icon(Icons.add),
               ),
           separatorBuilder: (context, index) => Divider(
-                height: 25,
+                height: 30,
                 thickness: 5,
                 color: Colors.green,
               ),

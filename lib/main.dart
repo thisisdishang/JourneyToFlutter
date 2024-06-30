@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:journey_to_flutter/CircleAvatar.dart';
 import 'package:journey_to_flutter/ExpandedExample.dart';
 import 'package:journey_to_flutter/ListView.dart';
 
@@ -37,7 +38,10 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Center(
           child: Text(
             'Journey To Flutter',
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
+            style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w500,
+                fontFamily: 'Silkscreen'),
           ),
         ),
       ),
@@ -54,14 +58,31 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Center(
                   child: Padding(
                     padding: const EdgeInsets.only(top: 25),
-                    child: Text(
-                      '...Keep Coding...',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        backgroundColor: Colors.deepPurpleAccent,
-                      ),
+                    child: Column(
+                      children: [
+                        Text(
+                          '...Coding is Fun...',
+                          style: TextStyle(
+                            fontFamily: 'Silkscreen',
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            backgroundColor: Colors.deepPurpleAccent,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          'We Make It Happen',
+                          style: TextStyle(
+                            fontFamily: 'Cinzel',
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
@@ -321,6 +342,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => mycirclavatar(),
+                          ),
+                        );
+                      },
+                      child: Text('Circle Avatar'),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(
