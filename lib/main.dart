@@ -3,6 +3,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:journey_to_flutter/CircleAvatar.dart';
 import 'package:journey_to_flutter/ExpandedExample.dart';
 import 'package:journey_to_flutter/ListView.dart';
+import 'package:journey_to_flutter/StylesThemes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,6 +16,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        textTheme: TextTheme(
+          displayLarge: TextStyle(
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+          ),
+          displayMedium: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w500,
+              fontStyle: FontStyle.italic),
+        ),
+      ),
       debugShowCheckedModeBanner: false,
       title: 'Jouney To Flutter',
       home: const MyHomePage(),
@@ -101,7 +115,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       splashColor: Colors.blue,
                       onTap: () {
-                        Fluttertoast.showToast(msg: 'Tapped on Container 1');
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => stylesthemes(),
+                          ),
+                        );
                       },
                       onLongPress: () {
                         Fluttertoast.showToast(
@@ -123,7 +142,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               print('Tapped on Row 1 Text');
                             },
                             child: Text(
-                              'Row 1',
+                              'Styles & Themes',
                               style: TextStyle(
                                 fontSize: 16,
                                 color: Colors.white,
