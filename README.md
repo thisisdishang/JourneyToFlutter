@@ -23,3 +23,4 @@ A Flutter project for learning Flutter from beginning to advance.
 |         `CircleAvatar Widget`         |
 |            `Custom Fonts`             |
 |          `Styles and Themes`          |
+|             `Card Widget`             |
