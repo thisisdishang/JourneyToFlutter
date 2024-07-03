@@ -4,6 +4,7 @@ import 'package:journey_to_flutter/CircleAvatar.dart';
 import 'package:journey_to_flutter/ExpandedExample.dart';
 import 'package:journey_to_flutter/ListView.dart';
 import 'package:journey_to_flutter/MyCard.dart';
+import 'package:journey_to_flutter/MyTextField.dart';
 import 'package:journey_to_flutter/StylesThemes.dart';
 
 void main() {
@@ -215,27 +216,38 @@ class _MyHomePageState extends State<MyHomePage> {
                     SizedBox(
                       width: 10,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.green,
-                        borderRadius: BorderRadius.only(
-                          topRight: Radius.elliptical(25, 30),
-                          bottomLeft: Radius.elliptical(30, 25),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => mytextfield(),
+                          ),
+                        );
+                        Fluttertoast.showToast(msg: 'TextField Widget Example');
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.green,
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.elliptical(25, 30),
+                            bottomLeft: Radius.elliptical(30, 25),
+                          ),
                         ),
-                      ),
-                      width: 150,
-                      height: 150,
-                      child: Center(
-                        child: InkWell(
-                          onTap: () {
-                            print('Tapped on Row 3 Text');
-                          },
-                          child: Text(
-                            'Row 3',
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
+                        width: 150,
+                        height: 150,
+                        child: Center(
+                          child: InkWell(
+                            onTap: () {
+                              print('Tapped on Row 3 Text');
+                            },
+                            child: Text(
+                              'TextField',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ),
