@@ -4,6 +4,7 @@ import 'package:journey_to_flutter/CircleAvatar.dart';
 import 'package:journey_to_flutter/ExpandedExample.dart';
 import 'package:journey_to_flutter/ListView.dart';
 import 'package:journey_to_flutter/MyCard.dart';
+import 'package:journey_to_flutter/MyDateTime.dart';
 import 'package:journey_to_flutter/MyTextField.dart';
 import 'package:journey_to_flutter/StylesThemes.dart';
 
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      title: 'Jouney To Flutter',
+      title: 'Journey To Flutter',
       home: const MyHomePage(),
     );
   }
@@ -256,25 +257,30 @@ class _MyHomePageState extends State<MyHomePage> {
                     SizedBox(
                       width: 10,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(25),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => mydatetime(),
                           ),
-                          color: Colors.blue,
-                          border: Border.all(
-                            width: 7,
-                            color: Colors.red,
-                          )),
-                      width: 150,
-                      height: 150,
-                      child: Center(
-                        child: InkWell(
-                          onTap: () {
-                            print('Tapped on Row 4 Text');
-                          },
+                        );
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(25),
+                            ),
+                            color: Colors.blue,
+                            border: Border.all(
+                              width: 7,
+                              color: Colors.red,
+                            )),
+                        width: 150,
+                        height: 150,
+                        child: Center(
                           child: Text(
-                            'Row 4',
+                            'Date & Time',
                             style: TextStyle(
                               fontSize: 16,
                               color: Colors.white,
