@@ -15,7 +15,7 @@ class _mydatetimeState extends State<mydatetime> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Date & Time'),
+        title: Text('Date & Time Example'),
         backgroundColor: Colors.deepPurpleAccent,
       ),
       body: Center(
