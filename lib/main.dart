@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.deeppurple,
+        primarySwatch: Colors.deepPurple,
         textTheme: TextTheme(
           displayLarge: TextStyle(
             fontSize: 22,
