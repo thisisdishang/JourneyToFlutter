@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:journey_to_flutter/CircleAvatar.dart';
 import 'package:journey_to_flutter/ExpandedExample.dart';
+import 'package:journey_to_flutter/GridView.dart';
 import 'package:journey_to_flutter/ListView.dart';
 import 'package:journey_to_flutter/MyCard.dart';
 import 'package:journey_to_flutter/MyDatePicker.dart';
@@ -337,7 +338,6 @@ class _MyHomePageState extends State<MyHomePage> {
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     ElevatedButton(
                       onPressed: () {
@@ -394,6 +394,55 @@ class _MyHomePageState extends State<MyHomePage> {
                         );
                       },
                       child: Text('ListTile'),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => mygridview(),
+                          ),
+                        );
+                      },
+                      child: Text('GridView'),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => myextentgridview(),
+                          ),
+                        );
+                      },
+                      child: Text('Extent GridView'),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => mygridviewbuilder(),
+                          ),
+                        );
+                      },
+                      child: Text('GridView Builder'),
                     ),
                   ],
                 ),
