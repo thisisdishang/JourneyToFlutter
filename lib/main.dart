@@ -48,6 +48,10 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
+callBack() {
+  print('Callback Function is Called');
+}
+
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
@@ -502,10 +506,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            Container(
-              width: 300,
-              height: 300,
-              child: Image.asset('assets/images/image2.jpg'),
+            InkWell(
+              onTap: () {
+                callBack();
+              },
+              child: Container(
+                width: 300,
+                height: 300,
+                child: Image.asset('assets/images/image2.jpg'),
+              ),
             ),
             Container(
               width: 300,
