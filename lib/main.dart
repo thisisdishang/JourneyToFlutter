@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:journey_to_flutter/CircleAvatar.dart';
+import 'package:journey_to_flutter/CustomWidget.dart';
 import 'package:journey_to_flutter/ExpandedExample.dart';
 import 'package:journey_to_flutter/GridView.dart';
 import 'package:journey_to_flutter/ListView.dart';
@@ -324,6 +325,40 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: Center(
                           child: Text(
                             'DatePicker\nTimePicker',
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => customwidget(),
+                          ),
+                        );
+                        Fluttertoast.showToast(msg: 'Custom Widget Example');
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.cyan,
+                          borderRadius: BorderRadius.only(
+                            bottomRight: Radius.circular(25),
+                          ),
+                        ),
+                        width: 150,
+                        height: 150,
+                        child: Center(
+                          child: Text(
+                            'Custom Widget',
                             style: TextStyle(
                               fontSize: 16,
                               color: Colors.white,
