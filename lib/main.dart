@@ -8,6 +8,7 @@ import 'package:journey_to_flutter/ListView.dart';
 import 'package:journey_to_flutter/MyCard.dart';
 import 'package:journey_to_flutter/MyDatePicker.dart';
 import 'package:journey_to_flutter/MyDateTime.dart';
+import 'package:journey_to_flutter/MyStack.dart';
 import 'package:journey_to_flutter/MyTextField.dart';
 import 'package:journey_to_flutter/StylesThemes.dart';
 
@@ -494,6 +495,22 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return mystack();
+                            },
+                          ),
+                        );
+                      },
+                      child: Text('Stack'),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(
