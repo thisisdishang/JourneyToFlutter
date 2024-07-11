@@ -25,4 +25,10 @@ A Flutter project for learning Flutter from beginning to advance.
 |          `Styles and Themes`          |
 |             `Card Widget`             |
 |          `TextField Widget`           |
+|             `DateFormat`              |
 |       `DatePicker & TimePicker`       |
+|           `GridView Widget`           |
+|          `Callback Function`          |
+|        `Splitting Into Widget`        |
+|            `Stack Widget`             |
+|            `Custom Widget`            |
