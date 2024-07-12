@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:journey_to_flutter/CircleAvatar.dart';
 import 'package:journey_to_flutter/CustomWidget.dart';
+import 'package:journey_to_flutter/MyWrap.dart';
 import 'package:journey_to_flutter/SplittingApp.dart';
 import 'package:journey_to_flutter/ExpandedExample.dart';
 import 'package:journey_to_flutter/GridView.dart';
@@ -589,6 +590,30 @@ class _MyHomePageState extends State<MyHomePage> {
                         );
                       },
                       child: Text('Expanded With Column'),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    OutlinedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return mywrap();
+                            },
+                          ),
+                        );
+                      },
+                      child: Text('Wrap'),
                     ),
                   ],
                 ),
