@@ -32,3 +32,4 @@ A Flutter project for learning Flutter from beginning to advance.
 |        `Splitting Into Widget`        |
 |            `Stack Widget`             |
 |            `Custom Widget`            |
+|             `Wrap Widget`             |
