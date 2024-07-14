@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:journey_to_flutter/CircleAvatar.dart';
 import 'package:journey_to_flutter/CustomWidget.dart';
+import 'package:journey_to_flutter/MySizebox.dart';
 import 'package:journey_to_flutter/MyWrap.dart';
 import 'package:journey_to_flutter/SplittingApp.dart';
 import 'package:journey_to_flutter/ExpandedExample.dart';
@@ -615,6 +616,20 @@ class _MyHomePageState extends State<MyHomePage> {
                       },
                       child: Text('Wrap'),
                     ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    OutlinedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => mysizebox(),
+                          ),
+                        );
+                      },
+                      child: Text('SizedBox'),
+                    )
                   ],
                 ),
               ),
