@@ -63,7 +63,11 @@ class mycard extends StatelessWidget {
                           TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
                     ),
                     subtitle: Text(subNames[index]),
-                    trailing: Icon(Icons.add),
+                    trailing: Icon(
+                      Icons.call,
+                      size: 30,
+                      color: Colors.cyan,
+                    ),
                   ),
                 ),
               ),

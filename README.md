@@ -34,3 +34,5 @@ A Flutter project for learning Flutter from beginning to advance.
 |            `Custom Widget`            |
 |             `Wrap Widget`             |
 |           `SizedBox Widget`           |
+|           `RichText Widget`           |
+|             `Icon Widget`             |
