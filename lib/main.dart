@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:journey_to_flutter/CircleAvatar.dart';
 import 'package:journey_to_flutter/CustomWidget.dart';
+import 'package:journey_to_flutter/FontAwesome.dart';
 import 'package:journey_to_flutter/MyRichText.dart';
 import 'package:journey_to_flutter/MySizebox.dart';
 import 'package:journey_to_flutter/MyWrap.dart';
@@ -644,6 +645,20 @@ class _MyHomePageState extends State<MyHomePage> {
                         );
                       },
                       child: Text('RichText'),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    OutlinedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => fontawesome(),
+                          ),
+                        );
+                      },
+                      child: Text('Font Awesome'),
                     )
                   ],
                 ),
