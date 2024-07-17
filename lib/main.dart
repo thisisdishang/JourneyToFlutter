@@ -433,7 +433,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     SizedBox(
                       width: 10,
                     ),
-                    OutlinedButton(
+                    TextButton(
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -447,7 +447,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     SizedBox(
                       width: 10,
                     ),
-                    TextButton(
+                    ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -464,7 +464,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     SizedBox(
                       width: 10,
                     ),
-                    ElevatedButton(
+                    TextButton(
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -546,7 +546,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         );
                       },
-                      child: Text('Stack'),
+                      child: Text('Stack & Positioned'),
                     ),
                     SizedBox(
                       width: 10,

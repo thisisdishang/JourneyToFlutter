@@ -36,4 +36,5 @@ A Flutter project for learning Flutter from beginning to advance.
 |           `SizedBox Widget`           |
 |           `RichText Widget`           |
 |             `Icon Widget`             |
-|                `Font `                |
+|            `Font Awesome`             |
+|          `Positioned Widget`          |

@@ -8,52 +8,85 @@ class mystack extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Stack Widget Example',
+          'Stack & Positioned Widget',
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.deepPurpleAccent,
       ),
-      body: Center(
-        child: Container(
-          width: 300,
-          height: 300,
-          child: Stack(
-            children: [
-              Container(
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        color: Colors.blueGrey,
+        child: Stack(
+          children: [
+            Positioned(
+              top: 50,
+              right: 40,
+              child: Container(
                 height: 200,
                 width: 200,
                 color: Colors.red,
-              ),
-              Positioned(
-                left: 30,
-                top: 30,
-                child: Container(
-                  height: 200,
-                  width: 200,
-                  color: Colors.blue,
-                ),
-              ),
-              Positioned(
-                left: 60,
-                top: 60,
-                child: Container(
-                  height: 200,
-                  width: 200,
-                  color: Colors.green,
-                  child: Center(
-                    child: Text(
-                      'Legend  Never  Die',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 25,
-                          fontFamily: "GreatVibes",
-                          fontWeight: FontWeight.bold),
-                    ),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 55, left: 80),
+                  child: Text(
+                    'Legend',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontFamily: "Cinzel",
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
-            ],
-          ),
+            ),
+            Positioned(
+              left: 50,
+              top: 150,
+              child: Container(
+                height: 200,
+                width: 200,
+                color: Colors.blue,
+                child: Center(
+                  child: Text(
+                    'Never',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontFamily: "GreatVibes",
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              bottom: 150,
+              right: 40,
+              child: Container(
+                height: 200,
+                width: 200,
+                color: Colors.green,
+                child: Center(
+                  child: Text(
+                    'Die',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontFamily: "Silkscreen",
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              left: 50,
+              bottom: 25,
+              child: Container(
+                height: 200,
+                width: 200,
+                color: Colors.yellow,
+              ),
+            ),
+          ],
         ),
       ),
     );
