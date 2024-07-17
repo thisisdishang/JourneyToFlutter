@@ -5,6 +5,7 @@ import 'package:journey_to_flutter/CustomWidget.dart';
 import 'package:journey_to_flutter/FontAwesome.dart';
 import 'package:journey_to_flutter/MyRichText.dart';
 import 'package:journey_to_flutter/MySizebox.dart';
+import 'package:journey_to_flutter/MyStateful.dart';
 import 'package:journey_to_flutter/MyWrap.dart';
 import 'package:journey_to_flutter/SplittingApp.dart';
 import 'package:journey_to_flutter/ExpandedExample.dart';
@@ -63,16 +64,47 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        surfaceTintColor: Colors.red,
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.orange,
+              ),
+              child: Center(
+                child: Text(
+                  'Journey To Flutter',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                      fontFamily: 'Silkscreen'),
+                ),
+              ),
+            ),
+            ListTile(
+              title: Center(child: const Text('Stateful Widget')),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => mystatefull(),
+                  ),
+                );
+              },
+            ),
+          ],
+        ),
+      ),
       appBar: AppBar(
         backgroundColor: Colors.orange,
-        title: Center(
-          child: Text(
-            'Journey To Flutter',
-            style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.w500,
-                fontFamily: 'Silkscreen'),
-          ),
+        title: Text(
+          'Journey To Flutter',
+          style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.w500,
+              fontFamily: 'Silkscreen'),
         ),
       ),
       body: SingleChildScrollView(

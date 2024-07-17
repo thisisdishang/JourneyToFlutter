@@ -38,3 +38,5 @@ A Flutter project for learning Flutter from beginning to advance.
 |             `Icon Widget`             |
 |            `Font Awesome`             |
 |          `Positioned Widget`          |
+|            `Drawer Widget`            |
+|           `Stateful Widget`           |
