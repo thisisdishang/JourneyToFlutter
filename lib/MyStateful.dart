@@ -16,7 +16,7 @@ class _mystatefullState extends State<mystatefull> {
     return Scaffold(
       appBar: AppBar(
         title: Text('My Stateful Widget'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.orange,
       ),
       body: Center(
         child: Column(
@@ -28,7 +28,7 @@ class _mystatefullState extends State<mystatefull> {
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
+                backgroundColor: Colors.orange.shade500,
                 elevation: 10,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(0),
