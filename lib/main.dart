@@ -3,6 +3,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:journey_to_flutter/CircleAvatar.dart';
 import 'package:journey_to_flutter/CustomWidget.dart';
 import 'package:journey_to_flutter/FontAwesome.dart';
+import 'package:journey_to_flutter/MyConstrainedBox.dart';
 import 'package:journey_to_flutter/MyRichText.dart';
 import 'package:journey_to_flutter/MySizebox.dart';
 import 'package:journey_to_flutter/MyStateful.dart';
@@ -703,6 +704,20 @@ class _MyHomePageState extends State<MyHomePage> {
                         );
                       },
                       child: Text('Font Awesome'),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    OutlinedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => myconstrained(),
+                          ),
+                        );
+                      },
+                      child: Text('ConstrainedBox'),
                     )
                   ],
                 ),
