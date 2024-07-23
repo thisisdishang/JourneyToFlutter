@@ -9,6 +9,7 @@ import 'package:journey_to_flutter/MySizebox.dart';
 import 'package:journey_to_flutter/MyStateful.dart';
 import 'package:journey_to_flutter/MyStateful2.dart';
 import 'package:journey_to_flutter/MyWrap.dart';
+import 'package:journey_to_flutter/SplashScreen.dart';
 import 'package:journey_to_flutter/SplittingApp.dart';
 import 'package:journey_to_flutter/ExpandedExample.dart';
 import 'package:journey_to_flutter/GridView.dart';
@@ -46,7 +47,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       title: 'Journey To Flutter',
-      home: const MyHomePage(),
+      home: const Splashscreen(),
     );
   }
 }
