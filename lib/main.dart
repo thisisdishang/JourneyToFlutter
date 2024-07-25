@@ -9,6 +9,7 @@ import 'package:journey_to_flutter/MySizebox.dart';
 import 'package:journey_to_flutter/MyStateful.dart';
 import 'package:journey_to_flutter/MyStateful2.dart';
 import 'package:journey_to_flutter/MyWrap.dart';
+import 'package:journey_to_flutter/PassingData.dart';
 import 'package:journey_to_flutter/SplashScreen.dart';
 import 'package:journey_to_flutter/SplittingApp.dart';
 import 'package:journey_to_flutter/ExpandedExample.dart';
@@ -104,6 +105,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   context,
                   MaterialPageRoute(
                     builder: (context) => mystateful2(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: Center(child: const Text('Passing Data')),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PassingData(),
                   ),
                 );
               },
