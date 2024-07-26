@@ -43,3 +43,4 @@ A Flutter project for learning Flutter from beginning to advance.
 |        `ConstrainedBox Widget`        |
 |          `Switching Screen`           |
 |   `Passing Data To Another Screen`    |
+|     `Slider & RangeSlider Widget`     |

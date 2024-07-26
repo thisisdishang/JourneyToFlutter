@@ -4,6 +4,7 @@ import 'package:journey_to_flutter/CircleAvatar.dart';
 import 'package:journey_to_flutter/CustomWidget.dart';
 import 'package:journey_to_flutter/FontAwesome.dart';
 import 'package:journey_to_flutter/MyConstrainedBox.dart';
+import 'package:journey_to_flutter/MyRangeSlider.dart';
 import 'package:journey_to_flutter/MyRichText.dart';
 import 'package:journey_to_flutter/MySizebox.dart';
 import 'package:journey_to_flutter/MyStateful.dart';
@@ -116,6 +117,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   context,
                   MaterialPageRoute(
                     builder: (context) => PassingData(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: Center(child: const Text('Slider & Range Slider')),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => MyRangeSlider(),
                   ),
                 );
               },
