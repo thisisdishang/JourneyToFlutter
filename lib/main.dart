@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:journey_to_flutter/AnimatedContainer.dart';
 import 'package:journey_to_flutter/CircleAvatar.dart';
 import 'package:journey_to_flutter/CustomWidget.dart';
 import 'package:journey_to_flutter/FontAwesome.dart';
@@ -128,6 +129,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   context,
                   MaterialPageRoute(
                     builder: (context) => MyRangeSlider(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: Center(child: const Text('Foo Animation')),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>MyAnimatedContainer(),
                   ),
                 );
               },

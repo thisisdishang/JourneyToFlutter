@@ -44,3 +44,4 @@ A Flutter project for learning Flutter from beginning to advance.
 |          `Switching Screen`           |
 |   `Passing Data To Another Screen`    |
 |     `Slider & RangeSlider Widget`     |
+|         `Animated Containers`         |
