@@ -18,7 +18,7 @@ class _MyRangeSliderState extends State<MyRangeSlider> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Slider & Range Slider'),
+        title: Text('Slider & Range Slider Widget'),
         backgroundColor: Colors.orange,
       ),
       body: Center(
