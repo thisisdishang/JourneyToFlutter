@@ -23,6 +23,9 @@ class _MyAnimatedContainerState extends State<MyAnimatedContainer> {
     color: Colors.blue,
   );
 
+  var myOpacity = 1.0;
+  bool opacityFlag = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,6 +57,19 @@ class _MyAnimatedContainerState extends State<MyAnimatedContainer> {
             SizedBox(
               height: 20,
             ),
+            AnimatedOpacity(
+              opacity: myOpacity,
+              duration: Duration(seconds: 2),
+              curve: Curves.fastOutSlowIn,
+              child: Container(
+                width: 100,
+                height: 100,
+                color: Colors.green.shade800,
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.orange,
@@ -63,9 +79,16 @@ class _MyAnimatedContainerState extends State<MyAnimatedContainer> {
               ),
               onPressed: () {
                 setState(() {
+                  if (opacityFlag) {
+                    myOpacity = 0.0;
+                    opacityFlag = false;
+                  } else {
+                    myOpacity = 1.0;
+                    opacityFlag = true;
+                  }
                   if (flag) {
                     _width = 100.0;
-                    _height = 200.0;
+                    _height = 100.0;
                     //bgColor = Colors.red;
                     myDecor = BoxDecoration(
                         borderRadius: BorderRadius.circular(50),
@@ -83,14 +106,14 @@ class _MyAnimatedContainerState extends State<MyAnimatedContainer> {
                     _height = 100.0;
                     //bgColor = Colors.orange;
                     myDecor = BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.blue);
+                        borderRadius: BorderRadius.circular(2),
+                        color: Colors.orange);
 
                     _width2 = 100.0;
                     _height2 = 200.0;
                     myDecor2 = BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.red);
+                        borderRadius: BorderRadius.circular(2),
+                        color: Colors.blue);
                     flag = true;
                   }
                 });

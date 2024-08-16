@@ -45,3 +45,4 @@ A Flutter project for learning Flutter from beginning to advance.
 |   `Passing Data To Another Screen`    |
 |     `Slider & RangeSlider Widget`     |
 |         `Animated Containers`         |
+|          `Animated Opacity`           |
