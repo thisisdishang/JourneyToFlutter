@@ -26,6 +26,8 @@ class _MyAnimatedContainerState extends State<MyAnimatedContainer> {
   var myOpacity = 1.0;
   bool opacityFlag = true;
 
+  bool isFirst = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,15 +59,42 @@ class _MyAnimatedContainerState extends State<MyAnimatedContainer> {
             SizedBox(
               height: 20,
             ),
-            AnimatedOpacity(
-              opacity: myOpacity,
-              duration: Duration(seconds: 2),
-              curve: Curves.fastOutSlowIn,
-              child: Container(
-                width: 100,
-                height: 100,
-                color: Colors.green.shade800,
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                AnimatedOpacity(
+                  opacity: myOpacity,
+                  duration: Duration(seconds: 2),
+                  curve: Curves.fastOutSlowIn,
+                  child: Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.green.shade800,
+                  ),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                AnimatedCrossFade(
+                  firstChild: Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.grey.shade400,
+                  ),
+                  secondChild: Image.asset(
+                    'assets/images/white.jpg',
+                    width: 150,
+                    height: 150,
+                  ),
+                  crossFadeState: isFirst
+                      ? CrossFadeState.showFirst
+                      : CrossFadeState.showSecond,
+                  duration: Duration(seconds: 2),
+                  sizeCurve: Curves.fastOutSlowIn,
+                  firstCurve: Curves.easeIn,
+                  secondCurve: Curves.bounceInOut,
+                ),
+              ],
             ),
             SizedBox(
               height: 20,
@@ -79,13 +108,6 @@ class _MyAnimatedContainerState extends State<MyAnimatedContainer> {
               ),
               onPressed: () {
                 setState(() {
-                  if (opacityFlag) {
-                    myOpacity = 0.0;
-                    opacityFlag = false;
-                  } else {
-                    myOpacity = 1.0;
-                    opacityFlag = true;
-                  }
                   if (flag) {
                     _width = 100.0;
                     _height = 100.0;
@@ -115,6 +137,20 @@ class _MyAnimatedContainerState extends State<MyAnimatedContainer> {
                         borderRadius: BorderRadius.circular(2),
                         color: Colors.blue);
                     flag = true;
+                  }
+
+                  if (opacityFlag) {
+                    myOpacity = 0.0;
+                    opacityFlag = false;
+                  } else {
+                    myOpacity = 1.0;
+                    opacityFlag = true;
+                  }
+
+                  if (isFirst) {
+                    isFirst = false;
+                  } else {
+                    isFirst = true;
                   }
                 });
               },
