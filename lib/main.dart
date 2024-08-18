@@ -4,6 +4,7 @@ import 'package:journey_to_flutter/AnimatedContainer.dart';
 import 'package:journey_to_flutter/CircleAvatar.dart';
 import 'package:journey_to_flutter/CustomWidget.dart';
 import 'package:journey_to_flutter/FontAwesome.dart';
+import 'package:journey_to_flutter/HeroAnimation.dart';
 import 'package:journey_to_flutter/MyConstrainedBox.dart';
 import 'package:journey_to_flutter/MyRangeSlider.dart';
 import 'package:journey_to_flutter/MyRichText.dart';
@@ -139,7 +140,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) =>MyAnimatedContainer(),
+                    builder: (context) => MyAnimatedContainer(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: Center(child: const Text('Hero Animation')),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HeroAnimation(),
                   ),
                 );
               },
