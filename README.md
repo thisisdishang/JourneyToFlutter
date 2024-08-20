@@ -1,8 +1,14 @@
 # JourneyToFlutter
 
-A Flutter project for learning Flutter from beginning to advance.
+A flutter project for learning flutter framework from beginning to advance.
 
-### Topic Covers:
+### User Interface:
+| | | |
+| :--: | :--: | :--: |
+| `Splash Screen` | `Home Screen` | `Drawer` |
+| ![](/screenshot/1.png) | ![](/screenshot/2.png) | ![](/screenshot/3.png) |
+
+### Topics Covered:
 
 |                                       |
 |:-------------------------------------:|
