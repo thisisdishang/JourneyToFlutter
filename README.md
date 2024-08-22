@@ -35,3 +35,4 @@ A flutter project for learning flutter framework from beginning to advance.
 | `Slider & RangeSlider Widget` |   `AnimatedContainers Widget`    |
 |   `AnimatedOpacity Widget`    |    `AnimatedCrossFade Widget`    |
 |         `Hero Widget`         |   `ListWheelScrollview Widget`   |
+|      `ClipRRect Widget`       |                                  |

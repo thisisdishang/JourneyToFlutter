@@ -6,6 +6,7 @@ import 'package:journey_to_flutter/CustomWidget.dart';
 import 'package:journey_to_flutter/FontAwesome.dart';
 import 'package:journey_to_flutter/HeroAnimation.dart';
 import 'package:journey_to_flutter/ListWheelScrollView.dart';
+import 'package:journey_to_flutter/MyClipRRect.dart';
 import 'package:journey_to_flutter/MyConstrainedBox.dart';
 import 'package:journey_to_flutter/MyRangeSlider.dart';
 import 'package:journey_to_flutter/MyRichText.dart';
@@ -782,6 +783,20 @@ class _MyHomePageState extends State<MyHomePage> {
                         );
                       },
                       child: Text('ConstrainedBox'),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    OutlinedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => MyClipRRect(),
+                          ),
+                        );
+                      },
+                      child: Text('ClipRRect'),
                     )
                   ],
                 ),
