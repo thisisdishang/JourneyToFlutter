@@ -36,3 +36,4 @@ A flutter project for learning flutter framework from beginning to advance.
 |   `AnimatedOpacity Widget`    |    `AnimatedCrossFade Widget`    |
 |         `Hero Widget`         |   `ListWheelScrollview Widget`   |
 |      `ClipRRect Widget`       |     `LinearGradient Widget`      |
+|    `RadialGradient Widget`    |                                  |

@@ -8,6 +8,7 @@ import 'package:journey_to_flutter/HeroAnimation.dart';
 import 'package:journey_to_flutter/ListWheelScrollView.dart';
 import 'package:journey_to_flutter/MyClipRRect.dart';
 import 'package:journey_to_flutter/MyConstrainedBox.dart';
+import 'package:journey_to_flutter/MyGradient.dart';
 import 'package:journey_to_flutter/MyRangeSlider.dart';
 import 'package:journey_to_flutter/MyRichText.dart';
 import 'package:journey_to_flutter/MySizebox.dart';
@@ -154,6 +155,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   context,
                   MaterialPageRoute(
                     builder: (context) => HeroAnimation(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: Center(child: const Text('Gradient')),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => MyGradient(),
                   ),
                 );
               },
