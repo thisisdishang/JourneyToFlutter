@@ -6,6 +6,7 @@ import 'package:journey_to_flutter/CustomWidget.dart';
 import 'package:journey_to_flutter/FontAwesome.dart';
 import 'package:journey_to_flutter/HeroAnimation.dart';
 import 'package:journey_to_flutter/ListWheelScrollView.dart';
+import 'package:journey_to_flutter/MappingLists.dart';
 import 'package:journey_to_flutter/MyClipRRect.dart';
 import 'package:journey_to_flutter/MyConstrainedBox.dart';
 import 'package:journey_to_flutter/MyGradient.dart';
@@ -596,6 +597,20 @@ class _MyHomePageState extends State<MyHomePage> {
                         );
                       },
                       child: Text('ListWheelScrollView'),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => MyMappingLists(),
+                          ),
+                        );
+                      },
+                      child: Text('Mapping Lists'),
                     ),
                   ],
                 ),
