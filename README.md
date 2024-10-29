@@ -37,4 +37,4 @@ A flutter project for learning flutter framework from beginning to advance.
 |         `Hero Widget`         |   `ListWheelScrollview Widget`   |
 |      `ClipRRect Widget`       |     `LinearGradient Widget`      |
 |    `RadialGradient Widget`    |         `Mapping Lists`          |
-|       `Tween Animation`       |        `Ripple Animation`        |
+|       `Tween Animation`       |        |
